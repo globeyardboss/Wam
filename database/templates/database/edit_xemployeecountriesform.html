@@ -1,0 +1,75 @@
+{% extends 'database/basex.html' %}
+
+{% block title %}X-Employee Countries Edit_Form{% endblock %}
+
+{% block content %}
+
+<div style="text-align: center">
+  <ul class="breadcrumb">
+
+  <li> <a href="{% url 'homex' %}">Home</a></li>
+
+  <li><a href="{% url 'homex' %}">Create Countries Information</a></li>
+  <li><a href="{% url 'homex' %}">Create Coutries Information</a></li>
+  <li>Create Coutries Information</a></li>
+</ul>  
+
+</div>
+
+</div>
+    <br>
+
+    <div class="card mx-auto"style="width: 80rem;">
+      <div class="card-header text-white" style="background-color: #428bca  ">Employee Countries</div>
+      <div class="card-body">
+ 
+   
+ 
+          <br>
+        
+
+          <form class="form-sample" action="{% url 'update_xemployee_countries' keyx=employment_countries.CountriesID keyyx=past_employees.PastEmployeeID %}" method="POST">
+            {% csrf_token %}
+
+              <input type="hidden" id="form_check" name="one"/>
+ 
+            <br>
+              
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Countries</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Countries" value="{{ employment_countries.Country_Name }}" name="Countries"/>
+                  </div>
+  
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label"></label>
+                  <div class="col-sm-9">
+          
+                    
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+      
+   
+                        <br>
+                        <div class=" clearfix">
+          <button class="btn btn-danger btn-rounded" type="reset">Clear</button>&nbsp;<button class="btn btn-success btn-rounded" type="submit">Save</button> 
+        </form>
+      </div>
+
+      <br>
+        <a href="{% url 'homex' %}"><button class="btn btn-primary btn-rounded ">Continue</button></a>
+     
+      </div>
+    </div>
+  
+{% endblock %}

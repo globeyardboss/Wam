@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Forms Tutorial</title>
+</head>
+<body>
+<h2>Django Forms Tutorial</h2>
+<form method="post" action="/getdata/">
+    <table>
+        <tr>
+            <td>FirstName</td>
+            <td><strong>{{ First_Name }}</strong></td>
+        </tr>
+        <tr>
+            <td>LastName</td>
+            <td><strong>{{ Last_Name }}</strong></td>
+        </tr>
+    </table>
+
+    <div class="row">
+        <div class="col-md-6">
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Other Name </label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="Other_Name" name="Other_Name" value="{{Other_Name}}">
+            </div>
+          </div>
+        </div>
+  
+</form>
+</body>
+</html>

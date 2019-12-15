@@ -1,0 +1,272 @@
+ 
+{% extends 'database/base.html' %}
+
+{% block content %}
+  
+  
+    <div class="card mx-auto"style="width: 80rem;">
+      <div class="card-header text-white" style="background-color: #428bca  ">Customer Information</div>
+      <div class="card-body">
+ 
+       
+ 
+          <br>
+        
+
+          <form class="form-sample" method="POST" action="/getdata/">
+ 
+            <br>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Intern ID</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="InternID" name="InternID" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Home Number</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="HomeNumber" name="HomeNumber">
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">First Name</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="First_Name" name="First_Name" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Mobile Number</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="MobileNumber" name="MobileNumber">
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+  
+  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label"> Last Name</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Last_Name" name="Last_Name" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Permanent Address Line 1</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="PermanentAddressLine1" name="PermanentAddressLine1">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Other Name </label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Other_Name" name="Other_Name">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Permanent Address Line 2</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="PermanentAddressLine2" name="PermanentAddressLine2">
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+                        <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Gender</label>
+                  <div class="col-sm-9">
+                    <select class="form-control" id="Gender" name="Gender" required>
+                      <option>Male</option>
+                      <option>Female</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">City</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="City" name="City">
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Date of Birth</label>
+                  <div class="col-sm-9">
+                    <input class="form-control" id="DOB" placeholder="mm/dd/yyyy" name="DOB" required>
+                  </div>
+  
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Country</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Country" name="Country" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Nationality</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Nationality" name="Nationality" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Current Address Line 1</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="CurrentAddressLine1" name="CurrentAddressLine1" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+  
+  
+      
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Email</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Email" name="Email">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Current Address Line 2</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="CurrentAddressLine2" name="CurrentAddressLine2" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+                        <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Documents</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Documents" name="Documents" required>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+  
+                  </div>
+                </div>
+              </div>           
+                        <div class="card-header text-white" style="background-color: #428bca  ">Internship History</div>
+          <br>
+             <div class="table-responsive">
+          
+          <table class="table table-bordered table-hover table-striped">
+              <thead class="thead">
+                  <tr>
+                    <th>History ID</th>
+                      <th>Area Assigned</th>
+                       <th>Location</th>
+                    <th>Supervisor Name</th>
+                    <th>Start Date</th>
+                   
+                    <th>Stop Date</th>
+                  
+                    
+                      <th>Paid Period</th>
+                      <th>Cost per Month</th>
+                      <th>Comments</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                  <tr>
+                    <td><input type="text" value ="1"></td>
+                    <td><input type="text" value ="Jolani"></td>
+                    <td><input type="text" value ="Allie"></td>
+                    <td><input type="text" value ="" required></td>
+                    <td><input type="text" value =""></td>
+                    <td><input type="text" value =""></td>
+                    <td><input type="text" value =""></td>
+                    <td><input type="text" value =""></td>
+                    <td><input type="text" value =""></td>
+                  </tr>
+              </tbody>
+                 </table>
+            </div>
+             <div class="card-header text-white" style="background-color: #428bca  ">Qualifications</div>
+          <br>
+              <div class="table-responsive">
+          
+          <table class="table table-bordered table-hover table-striped">
+              <thead class="thead">
+                  <tr>
+                    <th>Qualification ID</th>
+                       <th>Name of Institution</th>
+                    <th>Type of Institution</th>
+                    <th>Level Attained</th>
+                      <th>Year Attained</th>
+                   
+                    <th>Grade</th>
+                    <th>Experience</th>
+                    
+                   
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                  <tr>
+                    <td><input type="text" value ="1"></td>
+                    <td><input type="text" value ="Jolani"></td>
+                    <td><input type="text" value ="Allie"></td>
+                    <td><input type="text" value =""></td>
+                    <td><input type="text" value =""></td>
+                    <td><input type="text" value =""></td>
+                    <td><input type="text" value =""></td>
+               
+
+                  </tr>
+              </tbody>
+                 </table>
+            </div>     
+                        <br>
+          <button class="btn btn-danger btn-rounded" type="reset">Clear</button>&nbsp;<button class="btn btn-success btn-rounded" type="submit" value="submit">Save</button> 
+
+      </div>
+    </div>
+  
+{% endblock %}
